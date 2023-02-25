@@ -1,6 +1,6 @@
 {
   "name": "jm-agency",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -39,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }
