@@ -5,12 +5,34 @@ import Navigation from "../components/Navigation";
 import Logo from "../components/Logo";
 import ContactForm from "../components/ContactForm";
 import Buttons from "../components/Buttons";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const variants = {
+    initial: {
+      opacity: 0,
+      x: -200,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+    exit: {
+      opacity: 0,
+      x: 200,
+    },
+  };
+
   return (
     <main>
       <Mouse />
-      <div className="contact">
+      <motion.div
+        className="contact"
+        initial="initial"
+        animate="visible"
+        exit="exit"
+        variants={variants}
+      >
         <Navigation />
         <Logo />
         <ContactForm />
@@ -52,7 +74,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 };
